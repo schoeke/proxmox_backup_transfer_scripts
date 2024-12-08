@@ -221,7 +221,7 @@ Example with custom paths:
 
 ## Complete Backup Workflow
 
-See also [Automation[(#Automation). The complete backup process works as follows:
+See also [Automation](#Automation). The complete backup process works as follows:
 
 1. `service_psql_backup.sh` runs inside the container at 1 AM:
    - Creates an encrypted PostgreSQL backup
