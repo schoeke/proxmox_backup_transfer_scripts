@@ -1,6 +1,6 @@
 # Proxmox Backup Transfer System
 
-This project was created by me manually writing first versions of `service_psql_backups.sh` and `copyi_backups.sh`. It was then iteratively extended and improved with Claude.ai's Claude 3 Haiku and Claude 3.5 Sonnet. 
+This project was created by me manually writing first versions of `service_psql_backups.sh` and `copy_backups.sh`. It was then iteratively extended and improved with Claude.ai's Claude 3 Haiku and Claude 3.5 Sonnet. 
 
 The original idea was based on https://blog.vovando.dev/2017/04/11/encrypted-postgres-backups/.
 
