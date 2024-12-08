@@ -29,7 +29,7 @@ if [[ ! "$database_name" =~ ^[a-zA-Z0-9_]+$ ]]; then
     exit 1
 fi
 
-backup_public_key="/home/service/.ssh/mstdn_backup_key.pem.pub"
+backup_public_key="/home/service/.ssh/service_backup_key.pem.pub"
 backup_dir="/home/service/backup/database"
 backup_date=$(date +%Y%m%d%H%M)
 backup_file="${backup_dir}/${database_name}_${backup_date}.bz2.enc"
