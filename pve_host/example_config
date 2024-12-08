@@ -1,0 +1,6 @@
+DESTINATION_SERVER="" # Name of the Host in the ~/.ssh/config
+SOURCE_CONTAINER="" # ID of the Container or VM in Proxmox
+SOURCE_BACKUP_PATH="" # Location of the backup inside the CT/VM, should correspond to `ct_vm/service_psql_backup.sh` destination
+DESTINATION_PATH="" # Path on the remote server to backup to. Must exist
+SSH_KEY="" # Optional: Path to the ssh key for the remote server access. Defaults to `$HOME/.ssh/backup_transfer_key`
+LOGFILE="" # Optional: File for logging. Defaults to `/var/log/backup_transfer.log` 
