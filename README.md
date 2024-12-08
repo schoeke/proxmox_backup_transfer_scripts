@@ -221,7 +221,7 @@ Example with custom paths:
 
 ## Complete Backup Workflow
 
-See also Automation. The complete backup process works as follows:
+See also [Automation[(#Automation). The complete backup process works as follows:
 
 1. `service_psql_backup.sh` runs inside the container at 1 AM:
    - Creates an encrypted PostgreSQL backup
@@ -320,5 +320,5 @@ Contributions are welcome! Please follow these steps:
 
 ## Support
 
-For issues, questions, or contributions, please [create an issue](link-to-issues) in the repository.
+For issues, questions, or contributions, please [create an issue](https://codeberg.org/andrej/proxmox_scripts/issues/new) in the repository.
 
