@@ -34,11 +34,10 @@ First, generate the encryption key pair **on your local machine** (not in the co
 # Create a directory for key management
 mkdir -p ~/backup-keys && cd ~/backup-keys
 
-# Generate the private key
-openssl genpkey -algorithm RSA -out backup_private.pem
-
-# Generate the public key
-openssl rsa -pubout -in backup_private.pem -out backup_public.pem
+# Generate the private key and public certificate
+openssl req -x509 -nodes -days 1000000 -newkey rsa:4096 -keyout service_backup_key.pem \
+ -subj "/C=US/ST=Houston/L=Texas/O=IT/CN=some-site.com" \ # Adjust this to your taste \
+ -out service_backup_key.pem.pub
 
 # Secure the private key
 chmod 600 backup_private.pem
@@ -79,11 +78,11 @@ Copy the public key to each container that needs to create backups:
 
 ```bash
 # For a container with ID 111
-pct push 111 backup_public.pem /home/service/.ssh/service_backup_key.pem.pub
+pct push 111 backup_public.pem /home/service/.ssh/service_service_backup_key.pem.pub
 
 # Set proper permissions in the container
-pct exec 111 -- chmod 644 /home/service/.ssh/service_backup_key.pem.pub
-pct exec 111 -- chown service:service /home/service/.ssh/service_backup_key.pem.pub
+pct exec 111 -- chmod 644 /home/service/.ssh/service_service_backup_key.pem.pub
+pct exec 111 -- chown service:service /home/service/.ssh/service_service_backup_key.pem.pub
 ```
 
 ### 4. Get the Scripts
