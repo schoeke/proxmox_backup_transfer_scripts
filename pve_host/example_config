@@ -1,3 +1,4 @@
+# Example config file. can be named anything. Common format: $DESINATION_NAME.$BACKEDUP_SERVICE
 DESTINATION_SERVER="" # Name of the Host in the ~/.ssh/config
 SOURCE_CONTAINER="" # ID of the Container or VM in Proxmox
 SOURCE_BACKUP_PATH="" # Location of the backup inside the CT/VM, should correspond to `ct_vm/service_psql_backup.sh` destination
